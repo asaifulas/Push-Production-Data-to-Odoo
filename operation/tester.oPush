@@ -1,0 +1,16 @@
+#Set tester
+#Input CSV = S/N, Pass/Fail, Transformer S/N
+
+#==================================================================
+
+datain = datain.split(',')
+
+def data(number):
+	if((datain[number].strip()).casefold() == "pass" or (datain[number].strip()).casefold() == "fail"):
+		return (datain[number].strip()).casefold()
+	else:
+		return datain[number].strip()
+#==================================================================
+#cre, odoo, moid, data
+
+product_id = cre.env['mrp.workorder'].browse(moid).product_id
